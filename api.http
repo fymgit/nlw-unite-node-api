@@ -1,0 +1,39 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": "909809",
+    "details": "test",
+    "maximumAttendees": 1
+}
+// rota de criação do evento com os dados
+###
+
+POST http://localhost:3333/events/b1ccecc2-95f5-4ea5-bbb2-ac4eef65fba3/attendees
+Content-Type: application/json
+
+{
+    "name": "John Doe Dee",
+    "email": "johnDee5@email.com"
+}
+//rota de criação do participante com os dados e passando na URL o id do evento
+
+
+###
+GET http://localhost:3333/events/b1ccecc2-95f5-4ea5-bbb2-ac4eef65fba3
+Content-Type: application/json
+//rota de id do evento
+
+
+###
+GET http://localhost:3333/attendees/4/badge
+Content-Type: application/json
+// rota de busca do badge do participante pelo id
+
+
+###
+GET http://localhost:3333/attendees/4/check-in
+
+
+###
+GET http://localhost:3333/events/b1ccecc2-95f5-4ea5-bbb2-ac4eef65fba3/attendees?query=mary
